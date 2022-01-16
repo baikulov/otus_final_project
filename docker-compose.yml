@@ -18,12 +18,11 @@ services:
       - 8080:8080
 
   shiny:
-    image: shiny/test:new2
     environment:
       - DATABASE="db"
+    build: ./shiny/
     restart: always
     volumes:
-      - ./shiny/env:/home/shiny # .Renviron файл с переменной базы данных
       # - ./shiny/config:/etc/shiny-server # убираем веб-сокеты из конфига
       - ./shiny/shiny_logs:/var/log/shiny-server # логи
       - ./shiny/shinyapps:/srv/shiny-server # файлы приложения
