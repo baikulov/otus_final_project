@@ -32,7 +32,7 @@
 
 
 ### 3. Развертывание виртуальной машины на GCP
-
+Инструкция - https://github.com/baikulov/instructions/blob/master/how_to_create_vm_in_gcp.md
 
 
 ### 5. Разворачиваем приложение на виртуальной машине
