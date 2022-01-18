@@ -1,7 +1,7 @@
 # Финальный проект
 
 <!-- картинка -->
-![alt text](https://github.com/baikulov/otus_final_project/blob/master/images/flowchart.jpg)
+![alt text](https://github.com/baikulov/otus_final_project/blob/main/images/flowchart.jpg)
 
 ## Описание проекта
 Цель проекта: создать готовое решение для мониторинга работы в BigQuery
