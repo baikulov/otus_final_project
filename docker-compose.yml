@@ -17,14 +17,23 @@ services:
     ports:
       - 8080:8080
 
+  dbt:
+    build: ./dbt/docker-cron/
+
   shiny:
     environment:
-      - DATABASE="db"
+      - DATABASE='db'
+      - BQ_CREDENTIALS="otus_credentials.json"
+      - BQ_PROJECT="r-studio-280613"
+      - BQ_DATASET="Logging"
+      - BQ_BILLING_TABLE="gcp_billing_export_resource_v1_014770_4180B2_7DCD55"
+      - BQ_LOGS_TABLE="cloudaudit_googleapis_com_data_access"
+      - BQ_METADATA_TABLE="r-studio-280613_metadata"
     build: ./shiny/
     restart: always
     volumes:
       # - ./shiny/config:/etc/shiny-server # убираем веб-сокеты из конфига
       - ./shiny/shiny_logs:/var/log/shiny-server # логи
-      - ./shiny/shinyapps:/srv/shiny-server # файлы приложения
+      - ./shiny/shinyapps/shiny_bigquery_monitoring:/srv/shiny-server # файлы приложения
     ports:
       - 3838:3838

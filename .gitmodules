@@ -1,0 +1,6 @@
+[submodule "shiny_bigquery_monitoring"]
+	path = shiny_bigquery_monitoring
+	url = git@github.com:baikulov/shiny_bigquery_monitoring.git
+[submodule "shiny/shinyapps/shiny_bigquery_monitoring"]
+	path = shiny/shinyapps/shiny_bigquery_monitoring
+	url = git@github.com:baikulov/shiny_bigquery_monitoring.git
